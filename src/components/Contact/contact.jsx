@@ -37,7 +37,10 @@ const Contact = () => {
           <input type="text" className='name' placeholder='Your Name' name='your_name' />
           <input type="email" className='email' placeholder='Your Email' name='your_email' />
           <textarea className="msg" name='message' rows={5} placeholder='Your Message'></textarea>
-          <button type='submit' value="Send" className='submitBtn' >Submit</button>
+          {/* <button type='submit' value="Send" className='submitBtn' >Submit</button> */}
+          <button type='submit' value="Send" className='submitBtn' >
+        <span>Contact Me</span>
+      </button>
           <div className='links'>
             <a href="https://www.linkedin.com/in/vrchsav"  target="_blank"><img src={linkdin} alt=" linkdin" className='link' /></a>
             <a href="https://github.com/Vrchsav"  target="_blank"><img src={github} alt=" github" className='link' /></a>

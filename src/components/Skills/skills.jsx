@@ -13,7 +13,7 @@ const Skills = () => {
 
 With a solid foundation in both front-end development and data structures and algorithms, I approach every project with a problem-solving mindset. Whether it’s crafting responsive layouts or optimizing search algorithms, my goal is to deliver an exceptional digital experience.</span>
             <div className='skillBars'>
-                <SkillBar img={UIDesign} head="10+ Projects"></SkillBar>
+                <SkillBar img={UIDesign} head="Real World Projects"></SkillBar>
                 <SkillBar img={WebDesign}  head="250+ Leetcode Problems"></SkillBar>
                 <SkillBar img={AppDesign } head="5 star problem solver" p="in hacker rank"></SkillBar>
             </div>    

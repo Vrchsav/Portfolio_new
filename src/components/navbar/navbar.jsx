@@ -19,10 +19,12 @@ const Navbar = () => {
         <button className='desktopMenuBtn' onClick={()=>{
           document.getElementById('contact').scrollIntoView({behavior:'smooth'})
         }}>
-            <img src={contactImg} alt="contact"  className='desktopMenuImg'/>
-            Contct Me
-             
-        </button>
+        <span>Contact Me</span>
+       </button>
+
+
+
+       
         <img src={menu} alt="Menu" className='mobMenu'  onClick={() => setShowMenu(!showMenu)}/>
         <div className='navMenu'style={{display :showMenu?'flex':'none'}}>
           <Link activeClass='active' to='intro' spy={true} smooth={true}  offset={-100} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Home</Link>

@@ -15,7 +15,9 @@ const Intro = () => {
     </section>
     </span></span>
         <p className='introPara'>Hello world! I’m  Vrchsav, a web developer and DSA enthusiast with a flair for creating sleek,<br /> user-friendly websites and solving complex coding challenges.</p>
-        <a href="https://drive.google.com/file/d/1RuWigQ9FlupCXS9o5O5tmMsCrWse13U9/view?usp=sharing" target="_blank"><button className='btn'><img src={resume} alt="resume" className='btnImg'/>Resume</button></a>
+        <a href="https://drive.google.com/file/d/13SFgOuv0_T8qGPyp9jzxeF45gRud6uDn/view?usp=sharing" target="_blank"><button>
+        <span>Resume</span>
+      </button></a>
       </div>
       <img src={bg} alt="Profile"  className='bg'/>
     </section>
