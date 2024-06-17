@@ -30,7 +30,7 @@ const Works = () => {
             <p class="card__title">ESTATE CONNECT</p>
             <p class="card__description">Effortlessly navigate a curated haven of properties tailored to your desires with our MERN stack-powered platform.  ESTATE-CONNECT boasts a sleek, tailwind-driven interface, making your real estate journey intuitive and empowering.  Find your perfect match with ESTATE-CONNECT - where dream homes become reality.</p>
             <div class="buttons__container">
-              <a href="https://estate-connect.onrender.com/" target="_blank">
+              <a href="https://estate-connect.onrender.com" target="_blank">
               <button class="acceptButton">Live Demo</button></a>
             </div>
           </div>
