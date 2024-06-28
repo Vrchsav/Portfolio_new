@@ -15,8 +15,8 @@ const Works = () => {
         <div className='card'>
           <img src={tomato} class="worksImg" alt="" />
           <div class="card__content">
-            <p class="card__title">tomato ecommerce</p>
-            <p class="card__description">Welcome to Tomato, the one-stop online marketplace bringing the freshest and finest assortment of culinary delights right to your doorstep. Our platform is a vibrant fusion of traditional flavors and modern convenience, crafted meticulously using the robust MERN stack to ensure a seamless and responsive experience for food aficionados.</p>
+            <p class="card__title">Flavornaut ecommerce</p>
+            <p class="card__description">Welcome to Flavornaut, the one-stop online marketplace bringing the freshest and finest assortment of culinary delights right to your doorstep. Our platform is a vibrant fusion of traditional flavors and modern convenience, crafted meticulously using the robust MERN stack to ensure a seamless and responsive experience for food aficionados.</p>
             <div class="buttons__container">
               <a href="https://food-ecommerce-pi.vercel.app/" target="_blank">
               <button class="acceptButton">Live Demo</button></a>
