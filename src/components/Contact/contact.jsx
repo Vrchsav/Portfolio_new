@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRef } from 'react'
 import './contact.css'
-import Walmart from '../../assets/walmart.png'
 import linkdin from '../../assets/Linkdin.png'
 import github from '../../assets/github.png'
 import leetcode from '../../assets/leetcode.png'
