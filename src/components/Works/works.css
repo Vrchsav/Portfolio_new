@@ -159,3 +159,72 @@
     justify-content: center;
     
 }
+/* ==================================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#works {
+    animation: fadeIn 1s ease-out;
+}
+@keyframes slideInFromTop {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.worksTitle, .worksDesc {
+    animation: slideInFromTop 0.8s ease-out;
+}
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.worksImgs .card {
+    animation: scaleIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.worksImgs .card:nth-child(1) { animation-delay: 0.2s; }
+.worksImgs .card:nth-child(2) { animation-delay: 0.4s; }
+.worksImgs .card:nth-child(3) { animation-delay: 0.6s; }
+.worksImgs .card:nth-child(4) { animation-delay: 0.8s; }
+.card {
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05) rotateY(180deg);
+}
+
+.card__content {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+    transform: rotateY(0deg);
+}
+.acceptButton {
+    transition: all 0.3s ease;
+}
+
+.acceptButton:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+html {
+    scroll-behavior: smooth;
+}
+.worksImg {
+    transition: all 0.3s ease;
+}
+
+.card:hover .worksImg {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}

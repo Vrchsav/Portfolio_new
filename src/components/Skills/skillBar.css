@@ -33,3 +33,105 @@
         font-size: 5vw;
     }
 }
+/* =========================================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skillBar {
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+    animation: fadeInUp 0.5s ease-out;
+    transition: all 0.3s ease;
+}
+
+.skillBar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes rotateIcon {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.skillBarImg {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+    transition: all 0.3s ease;
+}
+
+.skillBar:hover .skillBarImg {
+    animation: rotateIcon 0.5s ease-in-out;
+}
+.skillBarText {
+    font-size: 0.9rem;
+    font-weight: 200;
+    transition: all 0.3s ease;
+}
+
+.skillBar:hover .skillBarText {
+    color: #ffff00; /* Change to your preferred highlight color */
+}
+.skillBarText > h2 {
+    transition: all 0.3s ease;
+}
+
+.skillBar:hover .skillBarText > h2 {
+    transform: scale(1.05);
+}
+.skillBar {
+    /* ... existing styles ... */
+    position: relative;
+    overflow: hidden;
+}
+
+.skillBar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #ffff00; /* Change to your preferred color */
+    transition: width 0.5s ease-out;
+}
+
+.skillBar:hover::after {
+    width: 100%;
+}
+@media screen and (max-width: 720px) {
+    .skillBarText > p {
+        font-size: 2vw;
+        transition: all 0.3s ease;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skillBarText > p {
+        font-size: 3vw;
+    }
+    .skillBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+        transition: all 0.3s ease;
+    }
+    .skillBarText > h2 {
+        font-size: 5vw;
+        transition: all 0.3s ease;
+    }
+}

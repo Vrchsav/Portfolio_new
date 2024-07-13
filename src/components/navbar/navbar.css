@@ -134,3 +134,65 @@ button {
   button:hover::before {
     box-shadow: inset 0 0 0 10em yellow;
   }
+
+
+  /* ==========================================================================/ */
+  button {
+    /* ... existing styles ... */
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    /* ... existing styles ... */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(255, 255, 0, 0.4);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.navbar {
+    /* ... existing styles ... */
+    animation: fadeIn 0.5s ease-out;
+}
+.listItem {
+    color: white;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background: rgb(30, 30, 30);
+    transition: all 0.3s ease;
+}
+
+.listItem:hover {
+    background: rgb(50, 50, 50);
+    transform: translateX(5px);
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.navMenu {
+    /* ... existing styles ... */
+    animation: slideIn 0.3s ease-out;
+}
+.desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.desktopMenuListItem:hover {
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid yellow;
+    transform: translateY(-2px);
+}
