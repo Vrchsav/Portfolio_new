@@ -64,8 +64,13 @@
 }
 @media screen  and (max-width: 480px){
     .bg{
-        right:-20vw ;
+        right:-26vw ;
     }
+}
+@media screen  and (max-width: 334px){
+  .bg{
+      right:-34vw ;
+  }
 }
 .container {
     text-transform: uppercase;

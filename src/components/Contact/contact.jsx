@@ -1,30 +1,48 @@
 import React from 'react'
-import { useRef } from 'react'
+import { useState } from 'react'
 import './contact.css'
 import linkdin from '../../assets/Linkdin.png'
 import github from '../../assets/github.png'
 import leetcode from '../../assets/leetcode.png'
-import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import ReCAPTCHA from "react-google-recaptcha";
+
+
 
 const Contact = () => {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
 
-    emailjs
-      .sendForm('service_u6qdhi1', 'template_cwnjdyl', form.current, {
-        publicKey: 'rz0usZAJ5HIi94kBhM5q1',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          e.target.reset()
-          alert('Email sent successfully!')
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "129fc767-b16b-4f2d-ad2f-67fd39b46eb8");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success(res.message);
+    }
+
+    if (res.error) {
+      toast.error(res.message);
+    }
+    setMessage("");
+    setEmail("");
+    setName("");
   };
   return (
     <section className='contactPage'>
@@ -32,10 +50,10 @@ const Contact = () => {
       <div id='contact'>
         <h1 className='contactPageTitle'>Contact Me</h1>
         <span className='contactDesc'>Please fill out the form below to discuss any work opportunities.</span>
-        <form className='contactForm' ref={form} onSubmit={sendEmail} > 
-          <input type="text" className='name' placeholder='Your Name' name='your_name' />
-          <input type="email" className='email' placeholder='Your Email' name='your_email' />
-          <textarea className="msg" name='message' rows={5} placeholder='Your Message'></textarea>
+        <form className='contactForm'  onSubmit={onSubmit} > 
+          <input type="text" className='name' placeholder='Your Name' name='name'  value={name} onChange={(e) => setName(e.target.value)}/>
+          <input type="email" className='email' placeholder='Your Email' name='email'  value={email} onChange={(e) => setEmail(e.target.value)} />
+          <textarea className="msg" name='message' rows={5} placeholder='Your Message' value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
           {/* <button type='submit' value="Send" className='submitBtn' >Submit</button> */}
           <button type='submit' value="Send" className='submitBtn' >
         <span>Contact Me</span>
