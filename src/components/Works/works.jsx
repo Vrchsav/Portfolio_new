@@ -4,6 +4,7 @@ import tomato from '../../assets/tomato website.png'
 import ESTATECONNECT from '../../assets/ESTATE CONNECT.jpg'
 import ongoing from '../../assets/ongoing.png'
 import Resume from '../../assets/Resume Ats.png'
+import googledrive from '../../assets/google-drive.jpg'
 const Works = () => {
   return (
     <section id='works'>
@@ -56,6 +57,17 @@ const Works = () => {
             <p class="card__description"> This platform enables users to create, consume, and rate educational content. The platform is built using the MERN stack, which includes ReactJS, NodeJS, MongoDB, and ExpressJS.</p>
             <div class="buttons__container">
               <a href="https://github.com/Vrchsav/ed-tech-platform" target="_blank">
+                <button class="acceptButton">Git Link</button></a>
+            </div>
+          </div>
+        </div>
+        <div className='card'>
+          <img src={googledrive} class="worksImg" alt="" />
+          <div class="card__content">
+            <p class="card__title">Google Drive Backend</p>
+            <p class="card__description"> This project is a backend replication of Google Drive, providing file storage, sharing, and management capabilities. It showcases proficiency in backend architecture, database management, and cloud infrastructure while addressing complex challenges like scalability and security.</p>
+            <div class="buttons__container">
+              <a href="https://github.com/Vrchsav/Google-Drive-Backend" target="_blank">
                 <button class="acceptButton">Git Link</button></a>
             </div>
           </div>
